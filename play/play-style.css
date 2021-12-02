@@ -21,6 +21,30 @@ body{
   height: 62%;
 }
 
+#smart-div {
+  background-color: #11222C;
+  position: absolute;
+  padding-left: 45px;
+  top: -3%;
+  padding-right: 111px;
+  margin-left: 15%;
+  margin-top: 192px;
+  padding-bottom: 27px;
+  border-radius: 62px;
+  width: 62%;
+  height: 62%;
+  display: none;
+}
+
+#smart-img {
+  display: flex;
+  width: 348px;
+  margin-left: 35%;
+  position: absolute;
+  top: 0%;
+  
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
