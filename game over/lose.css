@@ -1,0 +1,225 @@
+* {
+    padding: 0px;
+    
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#loser {
+    background-color: #11222C;
+    position: absolute;
+    padding-left: 45px;
+    top: -3%;
+    padding-right: 111px;
+    margin-left: 15%;
+    margin-top: 192px;
+    padding-bottom: 27px;
+    border-radius: 62px;
+    width: 62%;
+    height: 62%;
+    display: none;
+    z-index: -2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+    padding: 10px;
+    
+  }
+
+  .grid-item {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  
+#cry-img {
+    display: flex;
+    width: 259px;
+    margin-left: 36%;
+    transform: scaleX(-1);
+    /* padding-bottom: 18px; */
+    position: absolute;
+    top: -3%;
+}
+.water {
+  display: flex;
+  width: 259px;
+  margin-left: 36%;
+  transform: scaleX(-1);
+  /* padding-bottom: 18px; */
+  position: absolute;
+  top: -3%;
+}
+.water {
+  display: flex;
+  width: 259px;
+  margin-left: 36%;
+  transform: scaleX(-1);
+  /* padding-bottom: 18px; */
+  position: absolute;
+  top: -3%;
+}
+
+#last-img {
+    position: absolute;
+    margin-top: -677px;
+    width: 271px;
+    padding-top: 528px;
+    left: 85%;
+}
+
+#myBtn_loser {
+
+  left: 38%;
+}
+
+/*button */
+.loser .button {
+    border-radius: 4px;
+    background-color: #F6C624;
+    border: none;
+   
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-right: 100px;
+    position: absolute;
+    top: 92%;
+    left: 38%;
+  }
+  
+  .loser .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .loser .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .loser .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .loser .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .loser .button-PLAY {
+      background-color: #F6C624;
+  }
+
+
+  /*button */
+
+
+
+  /* The Modal (background) */
+  .loser .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .loser .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .loser .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .loser .close:hover,
+  .loser .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .loser input[type=text], select {
+      
+width: 83%;
+      
+padding: 34px 11px;
+      
+margin: 8px 0;
+      
+border-radius: 22px;
+      
+margin-top: 30%;
+      
+margin-left: 14%;
+      
+background-color: #C4C4C4;
+      
+font-size: 29px;
+      
+font-weight: bolder;
+}
+  
+.loser input[type=submit] {
+    width: 100%;
+   
+  
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 22px;
+    cursor: pointer;
+   
+  }
+ 
+
+
+h5 {
+ 
+text-align: center;
+padding-top: 21%;
+ 
+position: absolute;
+ 
+left: 30%;
+ 
+color: white;
+ 
+font-size: 112px;
+}
+
+.loser h3 {
+    font-size: 42px;
+    color: #80AA41;
+    padding-top: 34px;
+    position: absolute;
+}

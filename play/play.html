@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/play/play-style.css">
+    <link rel="stylesheet" href="/game over/lose.css">
+    <link rel="stylesheet" href="/you win/win.css">
+</head>
+<body>
+    <div id="back-div">
+<img src="/img/cat-smg.gif" alt="" id="cat-img">
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" >
+      <span class="close">&times;</span>
+      <p id="outputTxt">Some text in the Modal..</p>
+
+
+    </div>
+
+  </div>
+  <h3> <p><span id="numbr">10</span>/10</p> </h3>
+  <h2> Guess How many dogs are in the pond? </h2>
+  <input type="text" id="userInput" name="firstname" placeholder="Your Guess...">
+     <button id="myBtn" class="button button-INFO"><span>I think  </span></button>
+     <div>
+        <img src="/img/question.gif" alt="" id="last-img">
+    </div>
+  </div>
+</div>
+    <div id="loser">
+    <img src="/img/cry.gif" alt="" id="cry-img">
+        <h5> Game over </h5>
+        <a href="/index.htm"> <button id="myBtn_loser" class="button button-INFO"><span>Replay</span></button> </a>
+    </div>
+  </div>
+
+
+          <div id="win-div">
+            <img src="/img/dog-dance.gif" alt="" id="happy">
+            
+            
+                
+              <h6> You win! </h6>
+            
+              <a href="/index.htm"> <button id="myBtne" class="button button-INFO"><span>Replay</span></button> </a>
+                
+              
+            
+          </div>
+
+
+    <script>
+       
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+<script>
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      
+  var enterButton = document.getElementById('enterButton');
+  var output = document.getElementById('outputTxt');
+  var remiaing=document.getElementById("numbr");
+  var scoree=document.getElementById("score");
+  var randomNumber = Math.floor(Math.random()*100)+1;
+  var nbr=10;
+  
+  function random(){
+    var input = document.getElementById('userInput').value;
+ 
+    if(input == randomNumber){
+      if(nbr==1 || nbr==2)
+      {
+      
+        document.getElementById("back-div").style.display = "none";
+        document.getElementById("win-div").style.display = "block";
+
+ 
+      }
+      else{
+       
+        document.getElementById("back-div").style.display = "none";
+        document.getElementById("win-div").style.display = "block";
+       
+     
+ 
+      }
+     
+      
+    }
+    else if(input>randomNumber && input<100){
+ 
+      output.innerHTML="It Big";
+      nbr--;
+      remiaing.innerHTML=nbr;
+    }
+    else if(input<randomNumber && input>1){
+      output.innerHTML="It Small";
+      nbr--;
+      remiaing.innerHTML=nbr;
+    }
+    else if(input<1){
+      output.innerHTML="it have to be between  1 to 100";
+    }
+    else if(isNaN(input)){
+      output.innerHTML="it's not a number";
+    }
+    else{
+      output.innerHTML="it have to be between  1 to 100";
+    }
+    if(nbr==0){
+      output.innerHTML="GAME OVER";
+      document.getElementById("back-div").style.display = "none";
+      nbr=10;
+      remiaing.innerHTML=nbr;
+      document.getElementById("loser").style.display = "block";
+     
+    }
+   
+
+  }
+
+  myBtn.addEventListener('click', random );
+ 
+  
+</script>
+
+</div>
+</body>
+</html>

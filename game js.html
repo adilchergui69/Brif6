@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    <span id="numCOLOR" style="display:none">0</span>
+    <span>SCORE : </span>
+    <span id="score">0</span>
+    <p><span id="numbr">10</span>/10</p>
+    <p>ktb number mn 1 n 100</p>
+    <p id="outputTxt">ktb xi raqm </p>
+    <input id="userInput" >
+    <button id="btn">Enter</button>
+    
+
+  </div>
+ 
+  <script>
+    var enterButton = document.getElementById('enterButton');
+    var output = document.getElementById('outputTxt');
+    var remiaing=document.getElementById("numbr");
+    var scoree=document.getElementById("score");
+    var randomNumber = Math.floor(Math.random()*100)+1;
+    var nbr=10;
+    
+    function random(){
+      var input = document.getElementById('userInput').value;
+      if(input == randomNumber){
+        if(nbr==1 || nbr==2)
+        {
+          output.innerHTML="s7i7 otina dki bzaaaaf  "+ ", "+ " raqm howa  "+ randomNumber;
+            var score = 0;      
+             ++score;
+             scoree.innerHTML=score;
+   
+        }
+        else{
+          output.innerHTML="s7i7 "+ ", "+ " raqm howa  "+ randomNumber;
+          var score = 0;      
+             ++score;
+             scoree.innerHTML=score;
+   
+        }
+       
+        
+      }
+      else if(input>randomNumber && input<100){
+        output.innerHTML="kbir bzaaf";
+        nbr--;
+        remiaing.innerHTML=nbr;
+      }
+      else if(input<randomNumber && input>1){
+        output.innerHTML="sghir bzaaaf";
+        nbr--;
+        remiaing.innerHTML=nbr;
+      }
+      else if(input<1){
+        output.innerHTML="khas ikon mabayn 1 o 100";
+      }
+      else if(isNaN(input)){
+        output.innerHTML="hada maxi raqm";
+      }
+      else{
+        output.innerHTML="khas ikon mabayn 1 0 100";
+      }
+      if(nbr==0){
+        output.innerHTML="GAME OVER";
+        document.location.reload();
+        nbr=10;
+        remiaing.innerHTML=nbr;
+      }
+     
+
+    }
+ 
+    btn.addEventListener('click', random);
+   
+    
+  </script>
+</body>
+</html>
