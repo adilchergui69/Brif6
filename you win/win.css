@@ -148,9 +148,11 @@
 }
 
 
-input[type=text], select {
+input[type=number], select {
     
 width: 83%;
+    
+text-align: center;
     
 padding: 34px 11px;
     
